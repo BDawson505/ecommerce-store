@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 
 import ModalProvider from "@/providers/modal-providers";
+import ToastProvider from "@/providers/toast-provider";
 
 import "./globals.css";
 import Footer from "@/components/footer";
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={font.className}>
         <ModalProvider />
+        <ToastProvider />
         <Navbar />
         {children}
         <Footer />
